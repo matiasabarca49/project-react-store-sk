@@ -1,0 +1,23 @@
+.botonCarrito{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.botonCarrito img{
+    width: 30px;
+    height: 30px;
+}
+
+.botonCarrito p{
+    background-color: #ff0000;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    border-radius: 50px;
+    text-align: center;
+}

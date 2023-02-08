@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+header{
+    height: 70px;
+    width: 100%;
+    padding: 1rem 0;
+    position: absolute;
+    z-index: 999;
+    color: #fff;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+nav .logo a img{
+    width: 40px;
+}
+
+.logo a{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo a:link, .logo a:visited{
+    color: #fff;
+}
+
+
+

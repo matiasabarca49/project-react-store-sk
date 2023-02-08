@@ -1,0 +1,21 @@
+.menuBar{
+    margin-left: -120px ;
+}
+.menuBar ul{
+    display: flex;
+    gap: 1rem;
+}
+.menuBar ul li{
+    list-style: none;
+}
+
+.menuBar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.menuBar ul li a:link{
+    color: #fff;
+}
+.menuBar ul li a:visited{
+    color: #fff;
+}
