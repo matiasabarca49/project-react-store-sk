@@ -1,8 +1,8 @@
 import React from 'react'
-import './Eslogan.css'
+import './MainTitle.css'
 import imagenTitulo from './imagenTitulo.png'
 
-const Eslogan = () => {
+const MainTitle = () => {
   return (
     <main className='contenedorPrincipal'>
       <div className='contTitulo'>
@@ -19,4 +19,4 @@ const Eslogan = () => {
   )
 }
 
-export default Eslogan
+export default MainTitle
