@@ -1,0 +1,24 @@
+.producto{
+ padding: 1rem;
+ background-color: #ddd;
+ text-align: start;
+ width: 100%;
+ border-radius: 20px;
+ 
+}
+
+.producto h3{
+    font-size: 2rem;
+}
+
+.producto .productoCantidades{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.producto .productoCantidades div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

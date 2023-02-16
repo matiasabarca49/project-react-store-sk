@@ -1,12 +1,14 @@
-import React from 'react'
 import './CarWidget.css'
-import carrito from './compra.png'
+import carritoIMG from './compra.png'
+
 
 const CarWidget = () => {
+
+  
   return (
     <div className='botonCarrito'>
-            <img src={carrito} alt="Carrito" />
-            <p>4</p>
+            <img src={carritoIMG} alt="Carrito" />
+            <p>{1}</p>
     </div>
   )
 }
