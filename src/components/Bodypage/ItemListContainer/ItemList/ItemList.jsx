@@ -1,46 +1,29 @@
-import { useState } from 'react'
-import Item from './Item/Item'
 import './ItemList.css'
+import ItemCDs from './Items/ItemCDs'
+import ItemMerchandising from './Items/ItemMerchandising'
+import ItemVinilo from './Items/ItemVinilo'
+import { Route, Routes, NavLink} from 'react-router-dom'
 
 
-const ItemList = (props) => {
-  
 
-  const [carrito, setCarrito] = useState([])
-
-  
-  
-  
-  const agregarAlcarrito = (productoID) => {
-    const productoEncontradoEnCarrito = carrito.find(producto => producto.id ===  productoID);
-    if (productoEncontradoEnCarrito){
-      productoEncontradoEnCarrito.cantidad++
-      setCarrito([
-        ...carrito
-      ])
-    }
-    else{
-      const productoEncontradoEnBaseDeDatos = props.productos.find(producto => producto.id === productoID)
-      setCarrito([
-        ...carrito,
-        productoEncontradoEnBaseDeDatos
-      ])
-    }
-}
-
-
+const ItemList = ( ) => {
+   
   return (
    
-        <div className='products'>  
+        <div className='products' >  
+          <div className='productsBotonesCategoria'>
+            <NavLink to='/' className='btn btnPrimario' activeclassname='active'> CDs</NavLink>
+            <NavLink to='/vinilos' className='btn btnPrimario' activeclassname='active'> Vinilos</NavLink>
+            <NavLink to='/merchandising' className='btn btnPrimario' activeclassname='active'> Merchandising</NavLink>
+          </div>
+          <div className=' productsCategoria'>
+            <Routes>
+              <Route path='/' element={ <ItemCDs/> } />
+              <Route path='/vinilos' element={ <ItemVinilo/> } />
+              <Route path='/merchandising' element={ <ItemMerchandising/> } />
+            </Routes>
+          </div>
           
-          {props.productos.map(producto => 
-              <Item 
-                key={ producto.id } 
-                datos = { producto } 
-                eventoAgregarAlCarrito = { () => agregarAlcarrito(producto.id) } 
-
-              />)
-          }
         </div>
   )
 }

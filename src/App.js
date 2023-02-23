@@ -1,11 +1,15 @@
 import Navbar from './components/Navbar/Navbar';
 import Bodypage from './components/Bodypage/Bodypage';
+import { BrowserRouter } from 'react-router-dom'
+
 
 function App() {
   return <>
 
-      <Navbar />
-      <Bodypage />
+    <BrowserRouter>
+        <Navbar />
+        <Bodypage />
+    </BrowserRouter>
   
   </>
 }

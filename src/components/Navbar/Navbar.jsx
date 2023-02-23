@@ -1,19 +1,20 @@
 import React from 'react'
 import CarWidget from './CarWidget/CarWidget'
-import ItemList from './ItemList/ItemList'
+import NavList from './NavList/NavList.jsx'
 import './Navbar.css'
 import logo from './tocar.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <header>
       <nav>
           <div className='logo'>
-            <a href="../../public/index.html">
+            <Link to='/'>
               <img src={logo} alt="Logo" /> | <span>SOUNDKING</span>
-            </a>
+            </Link>
           </div>
-          <ItemList />
+          <NavList />
           <CarWidget />
       </nav>
 

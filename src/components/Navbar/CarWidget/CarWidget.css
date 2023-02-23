@@ -6,6 +6,10 @@
     cursor: pointer;
 }
 
+.botonCarrito:hover{
+    transform: scale(110%);
+}
+
 .botonCarrito img{
     width: 30px;
     height: 30px;

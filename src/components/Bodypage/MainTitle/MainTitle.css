@@ -31,6 +31,7 @@
     width: 70%;
     font-size: 3vw;
     opacity: 0.9;
+    font-weight: 500;
 }
 .contenedorPrincipal .contTitulo .contTitulo__frase p{
     margin-top: 35%;

@@ -1,21 +1,19 @@
 .menuBar{
     margin-left: -120px ;
-}
-.menuBar ul{
     display: flex;
     gap: 1rem;
 }
-.menuBar ul li{
-    list-style: none;
-}
 
-.menuBar ul li a{
+.menuBar .navList {
     text-decoration: none;
     color: #fff;
 }
-.menuBar ul li a:link{
+.menuBar .navList:hover{
+    transform: scale(110%);
+}
+.menuBar .navList:link{
     color: #fff;
 }
-.menuBar ul li a:visited{
+.menuBar .navList :visited{
     color: #fff;
 }
