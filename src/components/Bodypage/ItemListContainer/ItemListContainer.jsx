@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './ItemListContainer.css'
 import ItemList from './ItemList/ItemList'
 import { createContext } from 'react'
+import { getProducs } from '../../../data/baseDeDatos'
 
 
 export const usarProductos = createContext(null)
@@ -15,12 +16,10 @@ const ItemListContainer = (props) => {
 
   useEffect(() => {
    
-      setTimeout( () => {
-        fetch('./json/baseDeDatos.json')
-          .then(response => response.json())
-          .then(res => setProductosFetch(res))
-          .finally(setCargaProductos(true))
-      },2000)
+    getProducs
+      .then(res => setProductosFetch(res))
+      .catch(error => console.log(error))
+      .finally(setCargaProductos(true))
 
   }, [])
 

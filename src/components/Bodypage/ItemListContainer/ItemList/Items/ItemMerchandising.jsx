@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { usarProductos } from '../../ItemListContainer';
-import Button from '../../../../globals/Button/Button';
 import './Items.css'
+import { Link } from 'react-router-dom';
 
 
 const ItemMerchandising = (props) => {
@@ -22,7 +22,7 @@ const ItemMerchandising = (props) => {
                         <h3>{producto.nombre}</h3>
                         <h4>Precio: ${producto.precio}</h4>
                         <h5> Disponibles: {producto.stock}</h5>
-                        <Button texto={ "Ver Producto" }  estilo={ "btn btn--agregarAlCarrito" } />
+                        <Link to={ `/${producto.categoria}/${producto.id}`} className='btn btn--agregarAlCarrito'> Ver Producto </Link>
                     </div>
                 </div>
             )}
