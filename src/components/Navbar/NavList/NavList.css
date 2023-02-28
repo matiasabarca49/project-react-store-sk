@@ -8,6 +8,14 @@
     text-decoration: none;
     color: #fff;
 }
+.menuBar .navList button {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 .menuBar .navList:hover{
     transform: scale(110%);
 }

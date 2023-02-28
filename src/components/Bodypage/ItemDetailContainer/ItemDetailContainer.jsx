@@ -12,7 +12,7 @@ const ItemDetailContainer = (props) => {
     const [carga, setCarga] = useState(false)
 
     useEffect(() => {
-      getItem(id) // Cambiar por props.id
+      getItem(id) 
         .then(producto => {
           console.log(id)
           console.log(producto)

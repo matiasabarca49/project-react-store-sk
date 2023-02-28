@@ -17,9 +17,11 @@ const ItemListContainer = (props) => {
   useEffect(() => {
    
     getProducs
-      .then(res => setProductosFetch(res))
+      .then(res => {
+        setProductosFetch(res)
+        setCargaProductos(true)
+      })
       .catch(error => console.log(error))
-      .finally(setCargaProductos(true))
 
   }, [])
 
@@ -30,9 +32,9 @@ const ItemListContainer = (props) => {
       <div className='contProducts'>
           <h2>Productos</h2>
           { cargaProductos
-              ? <ItemList productos= { productosFetch } />
+              ? <ItemList />
               : <h3> Cargando... </h3>
-          }
+          } 
       </div>
 
     </usarProductos.Provider>

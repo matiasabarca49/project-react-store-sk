@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import CarWidget from './CarWidget/CarWidget'
 import NavList from './NavList/NavList.jsx'
 import './Navbar.css'
@@ -6,6 +6,8 @@ import logo from './tocar.png'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+
+
   return (
     <header>
       <nav>

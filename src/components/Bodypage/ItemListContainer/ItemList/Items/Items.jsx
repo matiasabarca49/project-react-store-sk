@@ -1,18 +1,30 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { usarProductos } from '../../ItemListContainer';
+import { Link, useParams } from 'react-router-dom';
 import './Items.css'
-import { Link } from 'react-router-dom';
 
 
-const ItemCDs = (  ) => {
-    
+const Items = (  ) => {
+
     const productos = useContext(usarProductos)
-    const productosCDs = productos.filter(producto => producto.categoria === "CD") 
+
+    const [productosDeCategoria, setproductosDeCategoria] = useState( [] )
+
+    const { categoria } = useParams()
+
+    useEffect(() => {
+        
+        categoria 
+            ? setproductosDeCategoria(productos.filter(producto => producto.categoria === categoria))
+            : setproductosDeCategoria(productos)
+
+    }, [productos,categoria])
+    
     
   return (
 
         <>
-            {productosCDs.map(producto =>
+            {productosDeCategoria.map(producto =>
                 <div key={ producto.id } className="producto">
                     <div className='productoImg'>
                       <h4>{producto.categoria}</h4>
@@ -30,4 +42,4 @@ const ItemCDs = (  ) => {
     )
 }
 
-export default ItemCDs
+export default Items
