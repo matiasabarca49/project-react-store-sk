@@ -4,6 +4,7 @@ import NavList from './NavList/NavList.jsx'
 import './Navbar.css'
 import logo from './tocar.png'
 import { Link } from 'react-router-dom'
+import Modo from './Modo/Modo'
 
 const Navbar = () => {
 
@@ -18,6 +19,7 @@ const Navbar = () => {
           </div>
           <NavList />
           <CarWidget />
+          <Modo />
       </nav>
 
     </header>

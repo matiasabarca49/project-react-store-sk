@@ -1,0 +1,47 @@
+.colorModo{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.colorModo img{
+    width: 40px;
+}
+
+.colorModo:hover{
+    transform: scale(110%);
+}
+
+.rootDark{
+    background-color: #181a1b;
+    color: #fff;
+}
+
+.rootDark .contenedorPrincipal .onda path {
+    fill: #181a1b;
+
+}
+
+.rootDark .contProducts {
+    color: #fff;
+
+}
+.rootDark .contProducts .products .productsCategoria .producto{
+    background-color: #131516;
+    color: #fff;
+}
+.rootDark .contProducts .products .vistaProducto{
+    background-color: #131516;
+    color: #fff;
+}
+
+.rootDark .contProducts .products .vistaProducto .vistaProductoContInfo .vistaProductoInfo .vistaProductoInfoPrecio{
+    background-color: #454a4d ;
+    color: #fff;
+}
+.rootDark .contProducts .products .vistaProducto .vistaProductoContInfo .vistaProductoDescripcion{
+    background-color: #454a4d ;
+    color: #fff;
+}

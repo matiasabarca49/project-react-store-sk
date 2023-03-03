@@ -1,0 +1,10 @@
+.contCarrito--active{
+    position: fixed;
+    right: 5px;
+    top: 70px;
+    width: 500px;
+    height: 500px;
+    background-color: #ddd;
+    border-radius: 10px;
+    z-index: 999;
+}

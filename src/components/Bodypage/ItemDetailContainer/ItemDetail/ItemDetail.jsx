@@ -20,7 +20,7 @@ const ItemDetail = ( props ) => {
           <div className='vistaProductoInfoPrecio'>
             <h4>${props.producto.precio}</h4>
             <h5>Disponibles: {props.producto.stock}</h5>
-            <Link className='btn btn--agregarAlCarrito'> Agregar al carrito</Link>
+            <button className='btn btn--agregarAlCarrito'> Agregar al carrito</button>
           </div>
         </div>
         <div className='separator'></div>

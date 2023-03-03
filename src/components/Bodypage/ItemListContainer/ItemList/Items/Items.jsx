@@ -23,12 +23,12 @@ const Items = (  ) => {
     
   return (
 
-        <>
+        <div className=' productsCategoria'>
             {productosDeCategoria.map(producto =>
                 <div key={ producto.id } className="producto">
                     <div className='productoImg'>
-                      <h4>{producto.categoria}</h4>
-                      <img src={producto.url} alt={producto.nombre} />
+                        <h4>{producto.categoria}</h4>
+                        <img src={producto.url} alt={producto.nombre} />
                     </div>
                     <div className='productoInfo'>
                         <h3>{producto.nombre}</h3>
@@ -38,7 +38,7 @@ const Items = (  ) => {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     )
 }
 
