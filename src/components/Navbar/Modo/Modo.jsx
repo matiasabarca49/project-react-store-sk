@@ -9,7 +9,6 @@ const Modo = () => {
 
   useEffect(() => {
     const modo = localStorage.getItem("modo")
-    console.log(modo)
     const contenedorPagina = document.getElementById("root")
     if (modo === "light" || modo === null){
         contenedorPagina.classList.remove("rootDark")

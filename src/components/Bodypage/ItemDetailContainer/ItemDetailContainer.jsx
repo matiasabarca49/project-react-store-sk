@@ -14,8 +14,6 @@ const ItemDetailContainer = (props) => {
     useEffect(() => {
       getItem(id) 
         .then(producto => {
-          console.log(id)
-          console.log(producto)
           setProducto(producto)
           setCarga(true)
         })

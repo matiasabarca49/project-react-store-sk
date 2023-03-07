@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../../Context/CartContex'
 import './ItemDetail.css'
 
 const ItemDetail = ( props ) => {
-
+ 
+  const { agregarAlCarrito } = useContext(CartContext)
 
   let categoria
   props.producto.categoria === "CD" 
@@ -20,7 +22,7 @@ const ItemDetail = ( props ) => {
           <div className='vistaProductoInfoPrecio'>
             <h4>${props.producto.precio}</h4>
             <h5>Disponibles: {props.producto.stock}</h5>
-            <button className='btn btn--agregarAlCarrito'> Agregar al carrito</button>
+            <button className='btn btn--agregarAlCarrito' onClick={()=> agregarAlCarrito(props.producto)}> Agregar al carrito</button>
           </div>
         </div>
         <div className='separator'></div>
