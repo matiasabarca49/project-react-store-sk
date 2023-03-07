@@ -32,16 +32,16 @@
     background-color: #131516;
     color: #fff;
 }
-.rootDark .contProducts .products .vistaProducto{
+.rootDark .vistaProducto{
     background-color: #131516;
     color: #fff;
 }
 
-.rootDark .contProducts .products .vistaProducto .vistaProductoContInfo .vistaProductoInfo .vistaProductoInfoPrecio{
+.rootDark .vistaProducto .vistaProductoContInfo .vistaProductoInfo .vistaProductoInfoPrecio{
     background-color: #454a4d ;
     color: #fff;
 }
-.rootDark .contProducts .products .vistaProducto .vistaProductoContInfo .vistaProductoDescripcion{
+.rootDark .vistaProducto .vistaProductoContInfo .vistaProductoDescripcion{
     background-color: #454a4d ;
     color: #fff;
 }

@@ -29,6 +29,7 @@
 .vistaProducto .vistaProductoContInfo h2{
     margin-top: 4rem;
     margin-bottom: 1rem;
+    font-size: 4rem;
 }
 
 
@@ -73,6 +74,9 @@
     background-color: #e8e8e8;
     padding: 1rem;
     border-radius: 10px;
+}
+.vistaProducto .vistaProductoContInfo .vistaProductoDescripcion p{
+    padding: 1rem;
 }
 
 

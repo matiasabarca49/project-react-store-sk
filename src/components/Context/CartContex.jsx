@@ -4,23 +4,23 @@ import { createContext } from 'react'
 
 export const CartContext = createContext()
 
-const defaulCart = []
-
 const CartProvider = (props) => {
 
-    const [cart, setCart] = useState(defaulCart)
+    const [cart, setCart] = useState([])
     const [total, setTotal] = useState(0) 
+    const [reCalcularTotal,setReCalcularTotal] = useState(false)
 
 
 
     useEffect(() => {
       
-        /* totalCarrito()  */
-        /* setTotal( cart.reduce((total, producto) => total + (producto.precio * producto.cantidad),0))
-        console.log("Cambio el carrito") */
+        setTotal( cart.reduce((total, producto) => total + (producto.precio * producto.cantidad),0))
+        console.log("Cambio el carrito")
+        setReCalcularTotal(false)
+         
     
      
-    }, [cart])
+    }, [cart, reCalcularTotal])
     
     
 
@@ -34,14 +34,22 @@ const CartProvider = (props) => {
         if (productoEncontrado){
             productoEncontrado.cantidad++
             setCart(cart)
+            setReCalcularTotal(true)
+            console.log("===============================")
+            console.log("Se aumento la cantidad")
+            console.log(cart)
         }
         else{
             
             setCart([...cart, producto] )
+            setReCalcularTotal(true)
+            console.log("===============================")
+            console.log("Se agregó un producto nuevo")
+            console.log(cart)
             
         }
-        setTotal( totalCarrito() )
-        //console.log(cart)
+        /* setTotal( totalCarrito() ) */
+        console.log("Total hasta ahora:", total)
     }
 
 
@@ -58,16 +66,17 @@ const CartProvider = (props) => {
         cart.map(producto => (
             producto.id === productoID && producto.cantidad++        
         ))
-
+        setReCalcularTotal(true)
     }
 
-    //Funciona para disminuit la cantidad de producto en el carr
+    //Funcion para disminuit la cantidad de producto en el carr
     const disminuirCantidadDeProducto = (productoID) =>{
         const productoEncontrado = cart.find(producto => producto.id === productoID)
         productoEncontrado.cantidad > 1
             ? productoEncontrado.cantidad-- 
             : productoEncontrado.cantidad = 1
         setCart(cart)
+        setReCalcularTotal(true)
     }
 
     //Funcion que vacia el carrito
@@ -79,16 +88,6 @@ const CartProvider = (props) => {
     const cantidadDeProductos = () =>{
         return cart.length
     }
-
-
-    // Funcion que calcula el total del Carrito
-    const totalCarrito = () => {
-        console.log(cart)
-        let totalCarrito = cart.reduce((total, producto) => total + (producto.precio * producto.cantidad),0)
-        console.log(totalCarrito)
-        return totalCarrito
-    }
-
 
   return (
 

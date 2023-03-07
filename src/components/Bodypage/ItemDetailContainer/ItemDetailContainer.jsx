@@ -25,7 +25,7 @@ const ItemDetailContainer = (props) => {
   return (
     <>
       
-      {carga? <ItemDetail producto = { producto }/> : <h1>Cargando...</h1>}
+      {carga? <ItemDetail producto = { producto }/> : <h1 style={{textAlign:'center', height:'calc(100vh - 70px)'}}>Cargando...</h1>}
     
     </>
 

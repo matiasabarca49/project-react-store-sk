@@ -14,7 +14,7 @@ const ItemDetail = ( props ) => {
 
   return (
     <div className='vistaProducto'>
-      <Link to = { `${categoria}` } className =' regresar ' > <img src="../img/flecha-izquierda.png" alt="" /> </Link>
+      <Link to = { `${categoria}` } className =' regresar '> <img src="../img/flecha-izquierda.png" alt=""/> </Link>
       <div className='vistaProductoContInfo'>
         <h2>{props.producto.nombre}</h2>
         <div className='vistaProductoInfo'>

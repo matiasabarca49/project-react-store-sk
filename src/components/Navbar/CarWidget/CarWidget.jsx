@@ -2,7 +2,7 @@ import './CarWidget.css'
 import carritoIMG from './compra.png'
 import { CartContext } from '../../Context/CartContex'
 import { useContext, useState} from 'react'
-import ContCarrito from '../../Bodypage/ContCarrito/ContCarrito'
+import ContCarrito from '../ContCarrito/ContCarrito'
 
 const CarWidget = () => {
 
