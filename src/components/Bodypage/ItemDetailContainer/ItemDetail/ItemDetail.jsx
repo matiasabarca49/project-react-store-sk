@@ -1,11 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../../../Context/CartContex'
+import ItemCount from './ItemCount'
 import './ItemDetail.css'
 
 const ItemDetail = ( props ) => {
  
-  const { agregarAlCarrito } = useContext(CartContext)
 
   let categoria
   props.producto.categoria === "CD" 
@@ -18,12 +17,8 @@ const ItemDetail = ( props ) => {
       <div className='vistaProductoContInfo'>
         <h2>{props.producto.nombre}</h2>
         <div className='vistaProductoInfo'>
-          <img src={`.${props.producto.url}`} alt={props.producto.nombre} />        
-          <div className='vistaProductoInfoPrecio'>
-            <h4>${props.producto.precio}</h4>
-            <h5>Disponibles: {props.producto.stock}</h5>
-            <button className='btn btn--agregarAlCarrito' onClick={()=> agregarAlCarrito(props.producto)}> Agregar al carrito</button>
-          </div>
+          <img src={`.${props.producto.url}`} alt={props.producto.nombre} />
+          <ItemCount producto={props.producto} />
         </div>
         <div className='separator'></div>
         <div className='vistaProductoDescripcion'>
