@@ -2,7 +2,8 @@ import './CarWidget.css'
 import carritoIMG from './compra.png'
 import { CartContext } from '../../Context/CartContex'
 import { useContext, useState} from 'react'
-import ContCarrito from '../ContCarrito/ContCarrito'
+import ContCarrito from '../ContCarritoNav/ContCarrito'
+
 
 const CarWidget = () => {
 
@@ -15,12 +16,17 @@ const CarWidget = () => {
     
       <div className='botonCarrito' onClick={ () => setActivarCarrito(!activarCarrito) }>
               <img src={carritoIMG} alt="Carrito" />
-              <p>{
+              {
                   cantidadDeProductos()
-              }</p>
+                    ? <p>{cantidadDeProductos()}</p>
+                    : null 
+              }
       </div>
+
       <ContCarrito 
       clase={ activarCarrito? "contCarrito--activated" : 'contCarrito--activated contCarrito--desactivated' }/>
+      
+     
     
     </>
   )

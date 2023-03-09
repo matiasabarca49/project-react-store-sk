@@ -1,0 +1,86 @@
+.contenedorPrincipalCarrito{
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contenedorPrincipalCarrito .totalProductos{
+    background-color: #ededed;
+    width: 70%;
+    /* border-radius: 10px; */
+    padding: 1rem;
+
+
+
+}
+.contenedorPrincipalCarrito .totalProductos .totalProductos__contEncabezado{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+.contenedorPrincipalCarrito .totalProductos .totalProductos__contEncabezado .totalProductos__encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.contenedorPrincipalCarrito .contProductosCarrito{
+    margin: 2rem;
+}
+
+
+.contenedorPrincipalCarrito .contProductosCarrito .productoCarrito {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    gap: 5rem;
+    position: relative; 
+}
+
+.contenedorPrincipalCarrito .contProductosCarrito .productoCarrito img{
+    width: 200px;
+}
+.contenedorPrincipalCarrito .contProductosCarrito .productoCarrito button{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+.contenedorPrincipalCarrito .contProductosCarrito .productoCarrito button:hover{
+    transform: scale(110%);
+}
+.contenedorPrincipalCarrito .contProductosCarrito .productoCarrito button img{
+    width: 40px;
+}
+
+.contenedorPrincipalCarrito .contProductosCarrito .productoCarrito .productoCarrito__contInfo h2{
+    font-weight: 300;
+    color: #00c0ff;
+}
+.contenedorPrincipalCarrito .contProductosCarrito .productoCarrito .productoCarrito__contInfo .productoCarrito__cantidades{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    
+}
+.contenedorPrincipalCarrito .contProductosCarrito .productoCarrito .productoCarrito__contInfo .productoCarrito__cantidades h3{
+    color: #9eaaba;
+    font-weight: 400;
+    
+}
+
+.contenedorPrincipalCarrito .contProductosCarrito .productoCarrito .productoCarrito__contInfo .productoCarrito__cantidades h2{
+    font-weight: 700;
+    color: #000;
+}
