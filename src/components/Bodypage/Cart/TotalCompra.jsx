@@ -17,7 +17,7 @@ const TotalCompra = () => {
             <h4 style={{ fontWeight:"300"}}> Costo de envio: </h4>
             <h4 style={{ fontWeight:"300"}}> ${cart.length? 1999 : 0}</h4>
           </div>
-          <h2>${cart.length?total + 1999 : 0}</h2>
+          <h2 style={{ marginTop: "1rem", fontSize: "2rem"  }}>${cart.length?total + 1999 : 0}</h2>
           <Link to='/Pagar' className='btn btnProcesarCompra' > PROCESAR COMPRA </Link>
           <div className='disclaimer'>
             <h4>Reserva de productos</h4>

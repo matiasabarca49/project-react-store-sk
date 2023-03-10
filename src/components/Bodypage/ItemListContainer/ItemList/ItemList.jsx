@@ -1,11 +1,10 @@
 import './ItemList.css'
 import '../../../globals/Button/Button.css'
 import Items from './Items/Items'
-import { Route, Routes} from 'react-router-dom'
 import Categorias from '../../../Navbar/Categorias/Categorias'
 
 
-const ItemList = () => {
+const ItemList = ({ productos }) => {
 
    
   return (
@@ -13,10 +12,11 @@ const ItemList = () => {
         <div className='products'>  
           
           <Categorias />
-          <Routes>
-            <Route exact path='/' element = { <Items /> } />
-            <Route exact path='/:categoria' element = { <Items /> } />
-          </Routes>
+          <div className=' productsCategoria'>
+            {productos.map( producto => (
+              <Items key={ producto.id } producto={ producto } />
+            ))}
+          </div>
 
         </div>
   )

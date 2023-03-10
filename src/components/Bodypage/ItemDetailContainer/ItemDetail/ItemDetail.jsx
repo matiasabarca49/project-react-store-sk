@@ -5,7 +5,7 @@ import './ItemDetail.css'
 
 const ItemDetail = ( props ) => {
  
-
+  //Regresamos a la categoria anterior
   let categoria
   props.producto.categoria === "CD" 
     ? categoria = "/"

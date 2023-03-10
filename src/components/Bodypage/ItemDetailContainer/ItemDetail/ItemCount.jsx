@@ -7,7 +7,7 @@ const ItemCount = ( props ) => {
     const [cantidad, setCantidad] = useState(1)
 
     const aumentarCantidad = () =>{
-        cantidad < 10 && setCantidad( cantidad + 1)
+        cantidad < props.producto.stock && setCantidad( cantidad + 1)
     }
 
     const disminuirCantidad = () =>{
@@ -24,7 +24,7 @@ const ItemCount = ( props ) => {
                 <h5>{cantidad}</h5>
                 <button className='btn' onClick={ disminuirCantidad }>-</button>
             </div>
-            <button className='btn btn--agregarAlCarrito' onClick={()=> agregarAlCarrito(props.producto)}> Agregar al carrito</button>
+            <button className='btn btn--agregarAlCarrito' onClick={()=> agregarAlCarrito(props.producto, cantidad)}> Agregar al carrito</button>
     </div>
   )
 }

@@ -7,9 +7,8 @@ import Cart from './components/Bodypage/Cart/Cart';
 import Pago from './components/Bodypage/Pago/Pago';
 
 
-
-
 function App() {
+
   return <>
   
     <CartProvider>

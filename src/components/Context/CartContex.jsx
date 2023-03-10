@@ -4,9 +4,11 @@ import { createContext } from 'react'
 
 export const CartContext = createContext()
 
+const defaultCart = JSON.parse(localStorage.getItem("carrito")) || [] 
+
 const CartProvider = (props) => {
 
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(defaultCart)
     const [total, setTotal] = useState(0) 
     const [reCalcularTotal,setReCalcularTotal] = useState(false)
 
@@ -15,10 +17,7 @@ const CartProvider = (props) => {
     useEffect(() => {
       
         setTotal( cart.reduce((total, producto) => total + (producto.precio * producto.cantidad),0))
-        console.log("Cambio el carrito")
         setReCalcularTotal(false)
-         
-    
      
     }, [cart, reCalcularTotal])
     
@@ -29,27 +28,21 @@ const CartProvider = (props) => {
     **/
 
     //Funcion agregar productos al carrito
-    const agregarAlCarrito = (producto) =>{
+    const agregarAlCarrito = (producto, cantProducto) =>{
         const productoEncontrado = cart.find(productoDelCarrito => productoDelCarrito.id === producto.id)
         if (productoEncontrado){
-            productoEncontrado.cantidad++
+            productoEncontrado.cantidad += cantProducto
             setCart(cart)
             setReCalcularTotal(true)
-            console.log("===============================")
-            console.log("Se aumento la cantidad")
-            console.log(cart)
+            
         }
         else{
-            
+            producto.cantidad = cantProducto
             setCart([...cart, producto] )
             setReCalcularTotal(true)
-            console.log("===============================")
-            console.log("Se agregó un producto nuevo")
-            console.log(cart)
             
         }
-        /* setTotal( totalCarrito() ) */
-        console.log("Total hasta ahora:", total)
+        /* guardarCarrito() */
     }
 
 
@@ -57,7 +50,7 @@ const CartProvider = (props) => {
     const eliminarDelCarrito = (productoID) => {
         const carritoSinElProducto = cart.filter(producto => producto.id !== productoID)
         setCart(carritoSinElProducto)
-        console.log(cart) 
+        /* guardarCarrito() */
     }
 
     //Funciona para aumentar la cantidad de producto en el carrito
@@ -66,6 +59,7 @@ const CartProvider = (props) => {
         cart.map(producto => (
             producto.id === productoID && producto.cantidad++        
         ))
+        /* guardarCarrito() */
         setReCalcularTotal(true)
     }
 
@@ -76,18 +70,27 @@ const CartProvider = (props) => {
             ? productoEncontrado.cantidad-- 
             : productoEncontrado.cantidad = 1
         setCart(cart)
+        /* guardarCarrito() */
         setReCalcularTotal(true)
     }
 
     //Funcion que vacia el carrito
     const vaciarCarrito  = ()=>{
         setCart([])
+        /* guardarCarrito() */
     }
 
     //Funcion que cuenta de producto por tipo
     const cantidadDeProductos = () =>{
         return cart.length
     }
+
+    //Funcion para guardar en localstorage
+    const guardarCarrito = () =>{
+        localStorage.setItem("carrito", JSON.stringify(cart))
+    }
+
+    guardarCarrito()
 
   return (
 

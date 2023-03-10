@@ -1,44 +1,45 @@
-import React, { useState, useEffect } from 'react'
 import './ItemListContainer.css'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import ItemList from './ItemList/ItemList'
-import { createContext } from 'react'
-import { getProducs } from '../../../data/baseDeDatos'
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
 
 
-export const usarProductos = createContext(null)
 
-
-const ItemListContainer = (props) => {
+const ItemListContainer = ( ) => {
 
   const [productosFetch, setProductosFetch] = useState([])
   const [cargaProductos, setCargaProductos] = useState(false)
 
+  const { categoria } = useParams()
 
   useEffect(() => {
-   
-    getProducs
-      .then(res => {
-        setProductosFetch(res)
+
+      const db = getFirestore()
+
+      const q = query(
+        collection(db, "items"),
+        categoria && where("categoria", "==", categoria )
+      )
+
+      getDocs(q).then(snapshot => {
+        setProductosFetch(snapshot.docs.map(doc => ({id: doc.id, ...doc.data()})))
         setCargaProductos(true)
       })
-      .catch(error => console.log(error))
 
-  }, [])
-
+    }, [categoria])
+    
+   
   return (
-
-    <usarProductos.Provider value={productosFetch}>
 
       <div className='contProducts'>
           <h2>Productos</h2>
           { cargaProductos
-              ? <ItemList />
+              ? <ItemList productos={ productosFetch }/>
               : <h3> Cargando... </h3>
           } 
       </div>
-
-    </usarProductos.Provider>
-        
+  
 
   )
 }

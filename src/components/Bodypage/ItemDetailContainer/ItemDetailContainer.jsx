@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail/ItemDetail'
-import { getItem } from '../../../data/baseDeDatos'
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 
 
-const ItemDetailContainer = (props) => {
+
+const ItemDetailContainer = () => {
 
     const { id } = useParams()
 
@@ -12,13 +13,17 @@ const ItemDetailContainer = (props) => {
     const [carga, setCarga] = useState(false)
 
     useEffect(() => {
-      getItem(id) 
-        .then(producto => {
-          setProducto(producto)
+
+      const db = getFirestore()
+
+      const productoRef = doc(db, "items", id )
+      getDoc(productoRef).then(snapshot => {
+        if (snapshot.exists()){
+          setProducto({id: snapshot.id, ...snapshot.data()})
           setCarga(true)
-        })
-        .catch(error => console.log(error))
-    
+        }
+      })
+
     }, [id])
     
 
