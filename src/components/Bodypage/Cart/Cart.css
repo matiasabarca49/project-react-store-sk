@@ -86,6 +86,7 @@
 .contenedorPrincipalCarrito .totalCompra{
     text-align: center;
     background-color: #f8f8f8;
+    color: #000;
     padding: 1rem;
 }
 

@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ItemDetailContainer from './components/Bodypage/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Bodypage/Cart/Cart';
 import Pago from './components/Bodypage/Pago/Pago';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route exact path='/Cart' element={<Cart />} />
             <Route exact path='/Pagar' element={< Pago />} />
           </Routes>
+          <Footer />
       </BrowserRouter>
 
     </CartProvider>

@@ -22,7 +22,7 @@ const Cart = () => {
               <h2>{cart.length} {cart.length <= 1?" Producto": "Productos" }</h2>
             </div>
           </div>
-          <Link to='/' >Seguir Comprando</Link>
+          <Link to='/' className='btn btnPrimario'>Seguir Comprando</Link>
         </div>
         <CartItem />
       </div>

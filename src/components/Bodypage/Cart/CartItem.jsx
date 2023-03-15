@@ -4,7 +4,7 @@ import { CartContext } from '../../Context/CartContex'
 
 const CartItem = () => {
 
-    const { cart, eliminarDelCarrito } = useContext(CartContext)
+  const { cart, eliminarDelCarrito } = useContext(CartContext)
 
   return (
     <div className='contProductosCarrito'>
@@ -12,7 +12,7 @@ const CartItem = () => {
             {cart.length
             
             ?  cart.map(producto => (
-                <div className='productoCarrito'> 
+                <div key={producto.id} className='productoCarrito'> 
                   <img src={producto.url} alt="" />
                   <div className='productoCarrito__contInfo'>
                     <h2>{producto.nombre}</h2>

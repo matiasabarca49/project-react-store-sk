@@ -42,9 +42,22 @@ div.contCarrito--desactivated{
     
 }
 
-.contCarrito--activated .contVaciarCarrito{
+.contCarrito--activated .contTotalCarritoNav{
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 1rem 0.5rem;
+}
+.contCarrito--activated .contTotalCarritoNav button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    
+}
+
+
+.contCarrito--activated .contTotalCarritoNav a{
+    background-image: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    color: #fff;
 }

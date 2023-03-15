@@ -41,7 +41,19 @@
     background-color: #454a4d ;
     color: #fff;
 }
+.rootDark .vistaProducto .vistaProductoContInfo .vistaProductoInfo .vistaProductoInfoPrecio .itemCount{
+    color: #000;
+}
 .rootDark .vistaProducto .vistaProductoContInfo .vistaProductoDescripcion{
     background-color: #454a4d ;
     color: #fff;
+}
+
+.rootDark .contenedorPrincipalCarrito{
+    color: #fff;
+    background-color: #222526;
+}
+
+.rootDark .contenedorPrincipalCarrito .totalProductos .contProductosCarrito .productoCarrito{
+    background-color: #181a1b;
 }

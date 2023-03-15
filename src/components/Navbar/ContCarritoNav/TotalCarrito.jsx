@@ -9,10 +9,10 @@ const { total, vaciarCarrito } = useContext(CartContext)
 
   return (
 
-    <div className='contVaciarCarrito'>
+    <div className='contTotalCarritoNav'>
         <h4>Total: ${ total } </h4>
-        <button onClick={  vaciarCarrito }>Vaciar Carrito</button>
-        <Link to='/Cart'>Ir a Pagar</Link>
+        <button  className='btn' onClick={  vaciarCarrito }>Vaciar Carrito</button>
+        <Link to='/Cart' className='btn'>Ir a Pagar</Link>
     </div>  
 
 
