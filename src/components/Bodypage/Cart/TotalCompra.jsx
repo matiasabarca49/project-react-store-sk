@@ -18,7 +18,10 @@ const TotalCompra = () => {
             <h4 style={{ fontWeight:"300"}}> ${cart.length? 1999 : 0}</h4>
           </div>
           <h2 style={{ marginTop: "1rem", fontSize: "2rem"  }}>${cart.length?total + 1999 : 0}</h2>
-          <Link to='/Pagar' className='btn btnProcesarCompra' > PROCESAR COMPRA </Link>
+          {cart.length
+            ?  <Link to='/Pagar' className='btn btnProcesarCompra' > PROCESAR COMPRA </Link>
+            : <button className='btnProcesarCompra desactivado'> PROCESAR COMPRA</button>
+          }
           <div className='disclaimer'>
             <h4>Reserva de productos</h4>
             <p>Los productos son reservados una vez realizado el pago y el mismo se encuentre aprobado.</p>

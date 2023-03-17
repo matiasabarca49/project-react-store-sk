@@ -37,3 +37,10 @@
     width: 100%;
     text-align: center;
 }
+
+.btnPrimarioColoreado{
+    background-image: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    color: #fff;
+    border: none;
+    width: 100%;
+}

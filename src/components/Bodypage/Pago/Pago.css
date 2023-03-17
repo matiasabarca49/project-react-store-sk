@@ -1,0 +1,118 @@
+.contPago{
+    margin: 2rem;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    color: #000;
+}
+
+.contPago .form{
+    padding: 1rem 0;
+    width: 35%;
+    margin: 0 auto;
+    text-align: start
+}
+
+.contPago .form .formInfo input{
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #ededed;
+    border-bottom: 2px solid #14a2f1;
+}
+.contPago .form .formInfo input:hover{
+    border:2px solid #0091df;
+}
+.contPago .form .formInfo input:focus{
+    outline: 2px solid #0091df;
+    background-color: #ccc;
+}
+
+
+.contPago .form .formInfo label{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.contPago .form  .formInfo .formNames{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.contPago .form .checkMetodoPago{
+    margin: 1rem 0;
+}
+.contPago .form .checkMetodoPago h4{
+    margin: 1rem 0;
+}
+
+.contPago .form .checkMetodoPago input{
+    width: 10%;
+}
+
+.pagoRealizado{
+    width: 50%;
+    margin: 1rem auto;
+    padding: 2rem 0;
+    background-color: #ededed;
+    text-align: center;
+    border-radius: 15px;
+    color: #000;
+}
+
+.pagoRealizado img{
+    width: 100px;
+    margin-bottom: 1rem ;
+}
+
+.pagoRealizado span{
+    display: block;
+    margin: 1rem 0;
+}
+
+.pagoRealizado .pagoExitoso{
+    background-color: #2ad352;
+    padding: 4rem;
+    color: #fff;
+}
+.pagoRealizado div h2{
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.pagoRealizado .agradecimientos{
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+.pagoRealizado .contProductosComprados{
+    margin: 2rem 5rem;
+    padding: 1rem;
+    text-align: start;
+    
+}
+
+.pagoRealizado .contProductosComprados h3{
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.pagoRealizado .contProductosComprados .listaProductosComprados{
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    overflow: auto;
+}
+
+.pagoRealizado .contProductosComprados .listaProductosComprados .productoComprado{
+    width: 200px;
+}
+
+.pagoRealizado .contProductosComprados .listaProductosComprados .productoComprado h4{
+    height: 90px;
+}

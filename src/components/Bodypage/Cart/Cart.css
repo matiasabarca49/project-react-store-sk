@@ -111,3 +111,10 @@
     padding: 1rem;
     font-weight: 700;
 }
+
+
+.contenedorPrincipalCarrito .totalCompra button.desactivado{
+    border: none;
+    background-image: none;
+    background-color: rgba(100, 100, 100, 0.5);
+}
