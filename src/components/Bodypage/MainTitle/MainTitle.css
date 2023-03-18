@@ -52,3 +52,29 @@
     background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
 }
 
+@media screen and (max-width: 567px) {
+
+    .contenedorPrincipal .contTitulo{
+    
+        padding-top: 80px;
+        height: 190px;
+        width: 90vw;
+    }
+   /*  .contenedorPrincipal .contTitulo img{
+    
+        margin: 3rem 0;
+    }
+ */
+    .contenedorPrincipal .contTitulo .contTitulo__frase h1 {
+        width: 80%;
+        font-size: 4.2vw;
+        
+    }
+
+    .contenedorPrincipal .contTitulo .contTitulo__frase p {
+        font-size: 3vw;
+        
+    }
+
+
+}

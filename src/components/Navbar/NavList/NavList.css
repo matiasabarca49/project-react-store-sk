@@ -25,3 +25,12 @@
 .menuBar .navList :visited{
     color: #fff;
 }
+
+@media screen and (max-width: 761px) {
+
+    div.menuBar{
+        display: none;
+        visibility: hidden;
+    }
+    
+}

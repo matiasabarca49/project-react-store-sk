@@ -11,3 +11,26 @@
     align-items: center;
 }
 
+@media screen and ( max-width: 991px) {
+
+    .contProducts .productsCategoria{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}
+
+@media screen and ( max-width: 761px) {
+
+    .contProducts .productsCategoria{
+        margin: 0 1rem;
+    }
+    
+}
+
+@media screen and ( max-width: 567px) {
+
+    .contProducts .productsCategoria{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}

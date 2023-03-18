@@ -42,5 +42,14 @@ nav .logo a img{
     color: #fff;
 }
 
+@media screen and (max-width: 761px) {
+
+    nav{
+        margin: 0 1rem;
+    }
+    
+    
+}
+
 
 
