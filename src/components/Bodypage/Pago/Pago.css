@@ -40,6 +40,9 @@
     display: flex;
     gap: 0.5rem;
 }
+.contPago .form  .formInfo .formNames div{
+    flex-grow: 1;
+}
 
 .contPago .form .checkMetodoPago{
     margin: 1rem 0;
@@ -50,6 +53,38 @@
 
 .contPago .form .checkMetodoPago input{
     width: 10%;
+}
+.contPago .form  button{
+    padding: 0.5rem;
+    border-radius:10px ;
+    width: 100%;
+    border: none;
+    cursor: initial;
+    background-color: rgba(100, 100, 100, 0.5);
+    color: #fff;
+}
+
+.contPago .modalCargando{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(5, 7, 12,0.70),rgba(5, 7, 12, 0.70));
+}
+
+.contPago .modalCargando h3{
+        /* margin: auto; */
+    /* top: 0; */
+    /* height: 200px; */
+    width: 500px;
+    margin: 50vh auto;
+    background-color: #333;
+    padding: 2rem;
+    /* bottom: 0; */
+    /* left: 0; */
+    /* position: relative; */
 }
 
 .pagoRealizado{
@@ -110,9 +145,36 @@
 }
 
 .pagoRealizado .contProductosComprados .listaProductosComprados .productoComprado{
-    width: 200px;
+    width: 100px;
+    text-align: center;
 }
 
 .pagoRealizado .contProductosComprados .listaProductosComprados .productoComprado h4{
     height: 90px;
+}
+
+@media screen and (max-width: 761px) {
+
+    .contPago{
+        margin: 2rem 1rem;
+    }
+
+    .contPago .form{
+        padding: 2rem;
+        width: 100%;
+        margin: 0 auto;
+        text-align: start
+    }
+
+    .pagoRealizado{
+        width: auto;
+        margin: 2rem 1rem;
+    }
+
+    .pagoRealizado .contProductosComprados{
+        margin: 2rem;
+        
+        
+    }
+    
 }

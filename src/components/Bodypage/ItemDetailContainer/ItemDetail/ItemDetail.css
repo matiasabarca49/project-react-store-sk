@@ -35,6 +35,7 @@
 
 .vistaProducto .vistaProductoContInfo .vistaProductoInfo{
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     padding: 1rem;
 }
@@ -97,4 +98,47 @@
     padding: 1rem;
 }
 
+@media screen and (max-width: 991px) {
 
+    
+
+    .vistaProducto .vistaProductoContInfo{
+        margin: 0;
+    }
+    .vistaProducto .vistaProductoContInfo h2{
+        text-align: center;
+    }
+    
+    .vistaProducto .vistaProductoContInfo .vistaProductoInfo::before{
+        display: none;
+        visibility: none;
+        
+    }
+    .vistaProducto .vistaProductoContInfo .vistaProductoInfo{
+        
+        text-align: center;
+        
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+
+    .vistaProducto{
+        margin: 1rem;
+    }
+
+    .vistaProducto .vistaProductoContInfo h2{
+        font-size: 7vw;
+    }
+
+    .vistaProducto .vistaProductoContInfo .vistaProductoInfo img{
+        width: 100%;
+    }
+
+    .vistaProducto .vistaProductoContInfo .vistaProductoInfo .vistaProductoInfoPrecio{
+        margin-top: 2rem;
+       
+    }
+    
+}

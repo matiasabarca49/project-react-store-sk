@@ -5,15 +5,15 @@ import ListCarrito from './ListCarrito'
 import TotalCarrito from './TotalCarrito'
 
 
-
 const ContCarrito = ( {clase} ) => {
 
   const { cart } = useContext(CartContext)
 
   const [esVacio, setEsVacio] = useState(true)
 
-  useEffect(() => {
 
+  useEffect(() => {
+   
     cart.length > 0
       ? setEsVacio(false)
       : setEsVacio(true)

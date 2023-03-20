@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import './Footer.css'
 
 const redes = [
-  {icono:'./img/instagram.png', url: "https://www.instagram.com/"},
-  {icono:'./img/gorjeo.png', url: "https://www.facebook.com/"},
-  {icono:'./img/facebook.png', url:"https://twitter.com/"}
+  {icono:'../img/instagram.png', url: "https://www.instagram.com/"},
+  {icono:'../img/gorjeo.png', url: "https://www.facebook.com/"},
+  {icono:'../img/facebook.png', url:"https://twitter.com/"}
 ]
  
 
@@ -16,7 +16,7 @@ const Footer = () => {
       
       <div className='logo'>
             <Link to='/'>
-              <img src='./img/viniloFooter2.png' alt="Logo" /> 
+              <img src='../img/viniloFooter2.png' alt="Logo" /> 
             </Link>
       </div>
       <div className='contRedes'>

@@ -4,6 +4,7 @@
     top: 75px;
     width: 500px;
     background-color: #ddd;
+    box-shadow: 5px 5px 20px #000;
     color: #000;
     border-radius: 10px;
     z-index: 999;
@@ -60,4 +61,13 @@ div.contCarrito--desactivated{
 .contCarrito--activated .contTotalCarritoNav a{
     background-image: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
     color: #fff;
+}
+
+@media screen and (max-width: 761px) {
+
+    .contCarrito--activated{
+        right: 0;
+        width: 100%;
+    }
+    
 }

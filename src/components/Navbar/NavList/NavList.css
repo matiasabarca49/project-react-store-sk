@@ -26,6 +26,15 @@
     color: #fff;
 }
 
+@media screen and (max-width: 991px) {
+
+    .menuBar{
+        margin-left: 0;
+    }
+    
+    
+}
+
 @media screen and (max-width: 761px) {
 
     div.menuBar{
