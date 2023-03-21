@@ -9,6 +9,7 @@ const CartItem = () => {
   return (
     <div className='contProductosCarrito'>
 
+            {/*  De acuerdo a la longitud del carrito, se indica que está vacio o se renderiza los productos  */}
             {cart.length
             
             ?  cart.map(producto => (

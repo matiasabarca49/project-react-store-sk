@@ -18,6 +18,7 @@ const TotalCompra = () => {
             <h4 style={{ fontWeight:"300"}}> ${cart.length? 1999 : 0}</h4>
           </div>
           <h2 style={{ marginTop: "1rem", fontSize: "2rem"  }}>${cart.length?total + 1999 : 0}</h2>
+          {/* De acuerdo a la longitud del array del carrito se habilita el boton pagar o no */}
           {cart.length
             ?  <Link to='/Pagar' className='btn btnProcesarCompra' > PROCESAR COMPRA </Link>
             : <button className='btnProcesarCompra desactivado'> PROCESAR COMPRA</button>

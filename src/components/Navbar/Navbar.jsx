@@ -13,10 +13,12 @@ const Navbar = () => {
     <header>
       <nav>
           <div className='logo'>
+            {/* se utiliza el componenete "LINK" de react router para redirgir a la url raiz  */}
             <Link to='/'>
               <img src={logo} alt="Logo" /> | <span>SOUNDKING</span>
             </Link>
           </div>
+          {/* Llamamos a los demás componentes que componen el NavBar */}
           <NavList />
           <CarWidget />
           <Modo />

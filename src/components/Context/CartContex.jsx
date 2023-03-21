@@ -4,6 +4,8 @@ import { createContext } from 'react'
 
 export const CartContext = createContext()
 
+//Esto nos permite obtener el carrito guardado en el localStorage en la sesion previa
+//En caso de que la key sea nula, se establece un carrito vacio
 const defaultCart = JSON.parse(localStorage.getItem("carrito")) || [] 
 
 const CartProvider = (props) => {
@@ -15,7 +17,7 @@ const CartProvider = (props) => {
 
 
     useEffect(() => {
-      
+        //Cada cambio en el carrito vuelve a calcular el total y lo guarda en su estado
         setTotal( cart.reduce((total, producto) => total + (producto.precio * producto.cantidad),0))
         setReCalcularTotal(false)
      
@@ -33,6 +35,9 @@ const CartProvider = (props) => {
         if (productoEncontrado){
             productoEncontrado.cantidad += cantProducto
             setCart(cart)
+            /* Este estado nos permite volver a renderizar el carrito y recalcular cantidades 
+            y precios totales.
+            Gracias a esto en el componente preview de carrito en el nav se renderizan las nuevas cantidades */
             setReCalcularTotal(true)
             
         }
@@ -42,7 +47,6 @@ const CartProvider = (props) => {
             setReCalcularTotal(true)
             
         }
-        /* guardarCarrito() */
     }
 
 
@@ -50,34 +54,30 @@ const CartProvider = (props) => {
     const eliminarDelCarrito = (productoID) => {
         const carritoSinElProducto = cart.filter(producto => producto.id !== productoID)
         setCart(carritoSinElProducto)
-        /* guardarCarrito() */
     }
 
-    //Funciona para aumentar la cantidad de producto en el carrito
+    //Funcion para aumentar la cantidad de producto en el carrito
     const aumentarCantidadDeProducto = (productoID) =>{
 
         cart.map(producto => (
             producto.id === productoID && producto.cantidad++        
         ))
-        /* guardarCarrito() */
         setReCalcularTotal(true)
     }
 
-    //Funcion para disminuit la cantidad de producto en el carr
+    //Funcion para disminuir la cantidad de producto en el carrito
     const disminuirCantidadDeProducto = (productoID) =>{
         const productoEncontrado = cart.find(producto => producto.id === productoID)
         productoEncontrado.cantidad > 1
             ? productoEncontrado.cantidad-- 
             : productoEncontrado.cantidad = 1
         setCart(cart)
-        /* guardarCarrito() */
         setReCalcularTotal(true)
     }
 
     //Funcion que vacia el carrito
     const vaciarCarrito  = ()=>{
         setCart([])
-        /* guardarCarrito() */
     }
 
     //Funcion que cuenta de producto por tipo
@@ -90,6 +90,10 @@ const CartProvider = (props) => {
         localStorage.setItem("carrito", JSON.stringify(cart))
     }
 
+    /*
+    La funcion "guardaCarrito()" se coloca fuera de funciones para que el array Cart 
+    se guarde en localstorage con cada cambio en el carrito.
+     */
     guardarCarrito()
 
   return (

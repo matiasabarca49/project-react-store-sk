@@ -18,6 +18,7 @@ const ItemDetail = ( props ) => {
         <h2>{props.producto.nombre}</h2>
         <div className='vistaProductoInfo'>
           <img src={`.${props.producto.url}`} alt={props.producto.nombre} />
+          {/* Componente que nos permite agregar al carrito con la cantidad deseada */}
           <ItemCount producto={props.producto} />
         </div>
         <div className='separator'></div>

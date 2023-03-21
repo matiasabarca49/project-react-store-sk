@@ -17,11 +17,12 @@
 
 .botonCarrito p{
     background-color: #ff0000;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     position: absolute;
     top: -5px;
     right: -10px;
     border-radius: 50px;
     text-align: center;
+    font-size: 18px;
 }

@@ -12,7 +12,7 @@ const redes = [
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <footer className='footer'>
       
       <div className='logo'>
             <Link to='/'>
@@ -35,7 +35,7 @@ const Footer = () => {
         </ul>
       </div>
 
-    </div>
+    </footer>
   )
 }
 

@@ -74,17 +74,10 @@
     background-image: linear-gradient(rgba(5, 7, 12,0.70),rgba(5, 7, 12, 0.70));
 }
 
-.contPago .modalCargando h3{
-        /* margin: auto; */
-    /* top: 0; */
-    /* height: 200px; */
+.contPago .modalCargando .contModal{
     width: 500px;
-    margin: 50vh auto;
-    background-color: #333;
+    margin: 30vh auto;
     padding: 2rem;
-    /* bottom: 0; */
-    /* left: 0; */
-    /* position: relative; */
 }
 
 .pagoRealizado{
@@ -166,6 +159,10 @@
         text-align: start
     }
 
+    .contPago .modalCargando .contModal{
+        width: 100%;
+    }
+
     .pagoRealizado{
         width: auto;
         margin: 2rem 1rem;
@@ -177,4 +174,5 @@
         
     }
     
+
 }

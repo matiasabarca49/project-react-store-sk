@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Navigate } from 'react-router-dom'
 
+//Se recibe los datos de la orden mediante props y se muesta por pantalla.
+//Al pasar 60s se redirige al home
 
 const EstadoCompra = ( { orden } ) => {
 

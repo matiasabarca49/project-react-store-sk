@@ -57,3 +57,7 @@
 .rootDark .contenedorPrincipalCarrito .totalProductos .contProductosCarrito .productoCarrito{
     background-color: #181a1b;
 }
+
+.rootDark .contLoader .loader .slider{
+    background-color: #131516;
+}

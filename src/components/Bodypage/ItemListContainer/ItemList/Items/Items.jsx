@@ -16,6 +16,7 @@ const Items = ( { producto } ) => {
             <h3>{producto.nombre}</h3>
             <h4>Precio: ${producto.precio}</h4>
             <h5> Disponibles: {producto.stock}</h5>
+            {/* El enlace se crea mediante el id del producto + react router */}
             <Link to={ `/${producto.categoria}/${producto.id}`} className='btn btn--agregarAlCarrito'> Ver Producto </Link>
         </div>
     </div>
